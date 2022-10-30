@@ -1,7 +1,3 @@
-def explicit_euler(state, operator, dt, domain):
-    return state + dt * operator.calc_rhs(state, domain)
-
-
 def rk4(state, operator, dt, domain):
     k1 = operator.calc_rhs(state, domain)
     k2 = operator.calc_rhs(state + dt / 2 * k1, domain)
